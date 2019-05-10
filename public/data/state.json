@@ -1,0 +1,18 @@
+{
+  "newKey": 104,
+  "inputValue": "",
+  "items": [
+    {
+      "key": 101,
+      "value": "Apples"
+    },
+    {
+      "key": 102,
+      "value": "Oranges"
+    },
+    {
+      "key": 103,
+      "value": "Bananas"
+    }
+  ]
+}

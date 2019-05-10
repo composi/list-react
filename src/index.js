@@ -1,12 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { render } from './utils'
+import { run } from '@composi/core'
+import { Title } from './components/title'
+import { actions } from './effects/actions'
+import { List } from './components/list'
+import { batchSubscriptions } from './effects/subscriptions'
+import './styles/styles.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<Title greeting='Composi'/>, 'header')
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+const program = {
+  init() {
+    return [null]
+  },
+  view(state, send) {
+    return state && render(<List {...{state, send}} />, 'section');
+  },
+  update(state, msg, send) {
+    return actions(state, msg, send)
+  },
+  subscriptions(state, send) {
+    return batchSubscriptions
+  }
+}
+
+run(program)
