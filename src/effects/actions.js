@@ -14,6 +14,7 @@ export function actions(state, msg, send) {
       prevState.inputValue = value
       return [prevState]
     },
+
     addItem: () => {
       if (prevState.inputValue) {
         prevState.items.push({
@@ -27,6 +28,7 @@ export function actions(state, msg, send) {
       }
       return [prevState]
     },
+
     makeDeletable: key => {
       prevState.items = prevState.items.map(item => {
         if (item.key === key) {
@@ -39,12 +41,15 @@ export function actions(state, msg, send) {
       })
       return [prevState]
     },
+
     deleteItem: key => {
       prevState.items = prevState.items.filter(item => item.key !== key)
       send(saveLocally(prevState))
       return [prevState]
     },
+
     useFetchedData: data => [data],
+
     saveLocally: data => {
       idb.set('app-state', data)
       return

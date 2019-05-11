@@ -4,7 +4,7 @@ import { run } from '@composi/core'
 import { Title } from './components/title'
 import { actions } from './effects/actions'
 import { List } from './components/list'
-import { batchSubscriptions } from './effects/subscriptions'
+import { batchedSubscriptions } from './effects/subscriptions'
 import './styles/styles.css'
 
 render(<Title greeting='Composi'/>, 'header')
@@ -21,7 +21,7 @@ const program = {
     return actions(state, msg, send)
   },
   subscriptions(state, send) {
-    return batchSubscriptions
+    return batchedSubscriptions
   }
 }
 

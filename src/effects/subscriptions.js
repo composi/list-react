@@ -28,4 +28,4 @@ function handleEnterKey(state, send) {
   })
 }
 
-export const batchSubscriptions = batchEffects(handleEnterKey, fetchJsonData)
+export const batchedSubscriptions = batchEffects(handleEnterKey, fetchJsonData)
