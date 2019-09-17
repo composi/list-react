@@ -1,10 +1,6 @@
 import { batchEffects } from '@composi/core'
-import { Msg } from './messages'
+import { addItem, useFetchedData } from './messages'
 import { idb } from '@composi/idb'
-
-
-// Destructure Msg methods for send function:
-const { addItem, useFetchedData } = Msg
 
 
 function fetchJsonData(state, send) {

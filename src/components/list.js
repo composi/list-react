@@ -6,6 +6,7 @@ const { addItem, updateInputValue } = Msg
 
 export function List({ state, send }) {
   const input = useRef()
+  // @ts-ignore
   useEffect(() => input.current.focus())
   return (
     <div className="list-container">

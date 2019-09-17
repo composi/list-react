@@ -1,6 +1,5 @@
 import React from 'react'
-import { Msg } from '../effects/messages'
-const { makeDeletable } = Msg
+import { Msg, makeDeletable } from '../effects/messages'
 
 export function ListItem({ item, send }) {
   return (

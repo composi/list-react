@@ -1,9 +1,6 @@
-import { Msg } from './messages'
+import { Msg, deleteItem, saveLocally } from './messages'
 import { clone } from '@composi/merge-objects'
 import { idb } from '@composi/idb'
-
-// Destructure Msg methods for send function:
-const { deleteItem, saveLocally } = Msg
 
 export function actions(state, msg, send) {
   // Create deep clone of state for immutability:
