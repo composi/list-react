@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Composi with React
+
+This project uses Composi for state management, using the program runtime. But it uses React for rendering funcional components that use React hooks. Because it uses React to render, the JSX has to follow React rules.
+
+This project shows how Composi's runtime program `view` method can use any renderer to display its state.
+
 ## Available Scripts
 
 In the project directory, you can run:
