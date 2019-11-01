@@ -4,9 +4,14 @@ import { ListItem } from './list-item'
 
 const { addItem, updateInputValue } = Msg
 
+/**
+ * @typedef {import('../types').State} State
+ * @typedef {import('../types').Send} Send
+ * @param {{state: State, send: Send}} props
+ */
 export function List({ state, send }) {
+  /** @type {import('../types').InputRef} */
   const input = useRef()
-  // @ts-ignore
   useEffect(() => input.current.focus())
   return (
     <div className="list-container">

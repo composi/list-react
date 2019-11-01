@@ -1,5 +1,8 @@
 import React from 'react'
 
+/**
+ * @param {{greeting: string}} props
+ */
 export function Title({ greeting }) {
   return (
     <nav>

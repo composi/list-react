@@ -1,7 +1,10 @@
 import { union } from '@composi/core'
 
 
-// Define tagged union for actions:
+/**
+ * Define tagged union for actions.
+ * @type {import('../types').MessageUnion}
+ */
 export const Msg = union('updateInputValue', 'addItem', 'makeDeletable', 'deleteItem', 'useFetchedData', 'saveLocally')
 
-export const { updateInputValu, addItem, makeDeletable, deleteItem, useFetchedData, saveLocally} = Msg
+export const { updateInputValue, addItem, makeDeletable, deleteItem, useFetchedData, saveLocally} = Msg

@@ -1,15 +1,26 @@
 import { Msg, deleteItem, saveLocally } from './messages'
-import { clone } from '@composi/merge-objects'
+import { clone } from '@composi/clone'
 import { idb } from '@composi/idb'
 
+/**
+ * @typedef {import('../types').State} State
+ * @typedef {import('../types').Message} Message
+ * @typedef {import('../types').Send} Send
+ */
+/**
+ * @param {State} state
+ * @param {Message} msg
+ * @param {Send} send
+ */
 export function actions(state, msg, send) {
   // Create deep clone of state for immutability:
+  /** @type {State} */
   const prevState = clone(state)
   // Match received msg with tagged union types:
   return Msg.match(msg, {
     updateInputValue: value => {
       prevState.inputValue = value
-      return [prevState]
+      return prevState
     },
 
     addItem: () => {
@@ -23,7 +34,7 @@ export function actions(state, msg, send) {
       } else {
         alert('Please provide a value before submitting.')
       }
-      return [prevState]
+      return prevState
     },
 
     makeDeletable: key => {
@@ -36,16 +47,16 @@ export function actions(state, msg, send) {
         }
         return item
       })
-      return [prevState]
+      return prevState
     },
 
     deleteItem: key => {
       prevState.items = prevState.items.filter(item => item.key !== key)
       send(saveLocally(prevState))
-      return [prevState]
+      return prevState
     },
 
-    useFetchedData: data => [data],
+    useFetchedData: data => data,
 
     saveLocally: data => {
       idb.set('app-state', data)
