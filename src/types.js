@@ -28,7 +28,7 @@ export function noop() { }
  * @prop {(key: number) => State} makeDeletable
  * @prop {(key: number) => State} deleteItem
  * @prop {(data: State) => State} useFetchedData
- * @prop {(data: State) => States} saveLocally
+ * @prop {(data: State) => State} saveLocally
  */
 /**
  * @typedef {Object} MessageUnion

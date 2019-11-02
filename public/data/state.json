@@ -4,15 +4,15 @@
   "items": [
     {
       "key": 101,
-      "value": "Apples"
+      "value": "Talk to Mom"
     },
     {
       "key": 102,
-      "value": "Oranges"
+      "value": "Eat snacks"
     },
     {
       "key": 103,
-      "value": "Bananas"
+      "value": "Take a nap"
     }
   ]
 }

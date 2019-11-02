@@ -15,15 +15,16 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true
   },
   "include": [
-    "src/js/*",
-    "node_modules/@types/**/*.d.ts",
-    "ts-types/**/*.ts"
+    "src/index.js",
+    "node_modules/@types/react/*.d.ts",
+    "node_modules/@types/react-dom/*.d.ts",
+    "node_modules/@composi/src/*.js"
   ]
 }

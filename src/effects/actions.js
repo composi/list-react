@@ -13,9 +13,11 @@ import { idb } from '@composi/idb'
  * @param {Send} send
  */
 export function actions(state, msg, send) {
+
   // Create deep clone of state for immutability:
   /** @type {State} */
   const prevState = clone(state)
+
   // Match received msg with tagged union types:
   return Msg.match(msg, {
     updateInputValue: value => {
@@ -60,7 +62,7 @@ export function actions(state, msg, send) {
 
     saveLocally: data => {
       idb.set('app-state', data)
-      return
+      return prevState
     }
   })
 }
