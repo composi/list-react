@@ -1,5 +1,5 @@
 import React from 'react'
-import { Msg, makeDeletable } from '../effects/messages'
+import { makeDeletable } from '../effects/messages'
 
 /**
  * @typedef {import('../types').Item} Item
