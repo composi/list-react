@@ -20,7 +20,7 @@ render(<Title greeting='Composi'/>, 'header')
 /** @type {Program} */
 const program = {
   init() {
-    return null
+
   },
   /**
    * @param {State} state

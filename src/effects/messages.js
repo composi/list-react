@@ -1,4 +1,4 @@
-import { union } from '@composi/core'
+import { union } from '@composi/core/src/union'
 
 
 /**
