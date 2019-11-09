@@ -1,4 +1,4 @@
-import { batchEffects } from '@composi/core/src/effects'
+import { batchEffects } from '@composi/runtime'
 import { addItem, useFetchedData } from './messages'
 import { idb } from '@composi/idb'
 
