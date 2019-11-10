@@ -7,10 +7,11 @@ import { makeDeletable } from '../effects/messages'
  * @param {{item: Item, send: Send}} props
  */
 export function ListItem({ item, send }) {
+  const {deletable, value, key} = item
   return (
-    <li className={item.deletable ? "list-item new-item remove-item" : 'list-item new-item'} key={item.key}>
-      <span>{item.value}</span>
-      <button onClick={() => send(makeDeletable(item.key))} className="delete-item">X</button>
+    <li className={deletable ? "list-item new-item remove-item" : 'list-item new-item'} key={item.key}>
+      <span>{value}</span>
+      <button onClick={() => send(makeDeletable(key))} className="delete-item">X</button>
     </li>
   )
 }
