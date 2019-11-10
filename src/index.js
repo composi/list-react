@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from './utils'
-import { run } from '@composi/core/src/runtime'
+import { run } from '@composi/runtime'
 import { Title } from './components/title'
 import { actions } from './effects/actions'
 import { List } from './components/list'
