@@ -1,4 +1,9 @@
+// Placeholder export to make types importable.
 export function noop() { }
+
+///////////////////////////////
+// Main @composi/runtime types:
+///////////////////////////////
 /**
  * @typedef {import('@composi/runtime').Message} Message
  * @typedef {import('@composi/runtime').Send} Send
@@ -6,6 +11,9 @@ export function noop() { }
  * @typedef {() => State} GetState
  */
 
+/////////////////
+// Project types:
+/////////////////
 /**
  * @typedef {Object} Item
  * @prop {number} key
