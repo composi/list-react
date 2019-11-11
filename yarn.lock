@@ -809,15 +809,15 @@
   resolved "https://registry.yarnpkg.com/@composi/clone/-/clone-1.0.1.tgz#a87fd4b98adad1b57c9569fed865ecde9d16297f"
   integrity sha512-ebqrVfYNDW9GWWehxZYPyqNSZl4u04Xq83U2RjeTEUU1mLlit6QL6Qvxxb1CKi3o480ix6iW6IqHC9IdrS9OnQ==
 
-"@composi/core@^2.5.10":
-  version "2.5.10"
-  resolved "https://registry.yarnpkg.com/@composi/core/-/core-2.5.10.tgz#3998ccb584ac8dd428b0e48b1f691039770ff472"
-  integrity sha512-P76zuugqzU4W2o1jiq21GkWgnf50xGq6NP5Kgrf3vx5xvMNGVP6iNmHUp1As1LcJbplZGDbbXDv5K+tra+Ip6w==
-
 "@composi/idb@^1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@composi/idb/-/idb-1.0.8.tgz#fe85b8027a8bbfcc21a18a57d2073d2eb06358ba"
   integrity sha512-1QfBAMnE0Rs5BKv0aKhs1suwzHPzS97e2h+2QUlI7QwqgO0TpObTtAsifK2mbvz2ux2Xxvusrvs6gA3dMEKu2g==
+
+"@composi/runtime@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@composi/runtime/-/runtime-1.0.1.tgz#f47349112eec09dc23cb00dd141908f51f2b0390"
+  integrity sha512-GjNSqzwNQXonVgbwkg9ylmjwnpUyxL8qwclj2COUVmq8B1s+3Ewo/SbOPO6Ld4C1eCsmsFgRBmP4pL3kMMH2kA==
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
@@ -1206,7 +1206,14 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/react@^16.9.11":
+"@types/react-dom@^16.9.4":
+  version "16.9.4"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.4.tgz#0b58df09a60961dcb77f62d4f1832427513420df"
+  integrity sha512-fya9xteU/n90tda0s+FtN5Ym4tbgxpq/hb/Af24dvs6uYnYn+fspaxw5USlw0R8apDNwxsqumdRoCoKitckQqw==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^16.9.11":
   version "16.9.11"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.11.tgz#70e0b7ad79058a7842f25ccf2999807076ada120"
   integrity sha512-UBT4GZ3PokTXSWmdgC/GeCGEJXE5ofWyibCcecRLUVN2ZBpXQGVgQGtG2foS7CrTKFKlQVVswLvf7Js6XA/CVQ==

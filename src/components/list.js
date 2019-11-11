@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { Msg } from '../effects/messages'
 import { ListItem } from './list-item'
 
-const { addItem, updateInputValue } = Msg
+const { AddItem, UpdateInputValue } = Msg
 /**
  * @typedef {import('../types').State} State
  * @typedef {import('../types').Send} Send
@@ -17,8 +17,8 @@ export function List({ state, send }) {
   return (
     <div className="list-container">
       <p className="list-container-form">
-        <input ref={input} onChange={e => send(updateInputValue(e.target.value))} value={state.inputValue} autoFocus type="text" />
-        <button onClick={() => send(addItem())} className="add-item">Add</button>
+        <input ref={input} onChange={e => send(UpdateInputValue(e.target.value))} value={state.inputValue} autoFocus type="text" />
+        <button onClick={() => send(AddItem())} className="add-item">Add</button>
       </p>
       <ul className="list">
         {

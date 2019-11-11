@@ -1,4 +1,4 @@
-import { Msg, deleteItem, saveLocally } from './messages'
+import { Msg, DeleteItem, SaveLocally } from './messages'
 import { clone } from '@composi/clone'
 import { idb } from '@composi/idb'
 
@@ -20,31 +20,31 @@ export function actions(state, msg, send) {
 
   // Match received msg with tagged union types:
   return Msg.match(msg, {
-    updateInputValue: value => {
+    UpdateInputValue: value => {
       prevState.inputValue = value
       return prevState
     },
 
-    addItem: () => {
+    AddItem: () => {
       if (prevState.inputValue) {
         prevState.items.push({
           key: prevState.newKey++,
           value: prevState.inputValue
         })
         prevState.inputValue = ''
-        send(saveLocally(prevState))
+        send(SaveLocally(prevState))
       } else {
         alert('Please provide a value before submitting.')
       }
       return prevState
     },
 
-    makeDeletable: key => {
+    MakeDeletable: key => {
       prevState.items = prevState.items.map(item => {
         if (item.key === key) {
           item.deletable = true
           setTimeout(() => {
-            send(deleteItem(key))
+            send(DeleteItem(key))
           }, 1000)
         }
         return item
@@ -52,15 +52,15 @@ export function actions(state, msg, send) {
       return prevState
     },
 
-    deleteItem: key => {
+    DeleteItem: key => {
       prevState.items = prevState.items.filter(item => item.key !== key)
-      send(saveLocally(prevState))
+      send(SaveLocally(prevState))
       return prevState
     },
 
-    useFetchedData: data => data,
+    UseFetchedData: data => data,
 
-    saveLocally: data => {
+    SaveLocally: data => {
       idb.set('app-state', data)
       return prevState
     }

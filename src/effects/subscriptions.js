@@ -1,5 +1,5 @@
-import { batchEffects } from '@composi/runtime'
-import { addItem, useFetchedData } from './messages'
+import { batch } from '@composi/runtime'
+import { AddItem, UseFetchedData } from './messages'
 import { idb } from '@composi/idb'
 
 
@@ -18,12 +18,12 @@ function fetchJsonData(getState, send) {
     /** @type {State} */
     const savedState = await idb.get('app-state')
     if (savedState) {
-      send(useFetchedData(savedState))
+      send(UseFetchedData(savedState))
     } else {
       const data = await fetch('/data/state.json')
       /** @type {State} */
       const json = await data.json()
-      send(useFetchedData(json))
+      send(UseFetchedData(json))
     }
   })()
 }
@@ -35,9 +35,9 @@ function fetchJsonData(getState, send) {
 function handleEnterKey(getState, send) {
   document.addEventListener('keypress', e => {
     if (e.keyCode === 13) {
-      send(addItem())
+      send(AddItem())
     }
   })
 }
 
-export const batchedSubscriptions = batchEffects(handleEnterKey, fetchJsonData)
+export const batchedSubscriptions = batch(handleEnterKey, fetchJsonData)

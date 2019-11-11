@@ -30,7 +30,7 @@
     "react-scripts": "3.1.1",
     "@composi/clone": "^1.0.1",
     "@composi/idb": "^1.0.8",
-    "@composi/runtime": "^1.0.0",
+    "@composi/runtime": "^1.0.1",
     "@types/node": "^12.12.3",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
