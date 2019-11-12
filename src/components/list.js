@@ -12,7 +12,8 @@ const { AddItem, UpdateInputValue } = Msg
  * @param {{state: State, send: Send}} props
  */
 export function List({ state, send }) {
-  const input = /** @type {InputRef} */(useRef())
+  /** @type {InputRef} */
+  const input = useRef()
   useEffect(() => input.current.focus())
   return (
     <div className="list-container">

@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from './utils'
 import { run } from '@composi/runtime'
 import { Title } from './components/title'
-import { actions } from './effects/actions'
 import { List } from './components/list'
-import { batchedSubscriptions } from './effects/subscriptions'
+import { actions } from './effects/actions'
+import { subs } from './effects/subscriptions'
 import './styles/styles.css'
 
 render(<Title greeting='Composi'/>, 'header')
@@ -42,7 +42,7 @@ const program = {
    * @param {Send} send
    */
   subscriptions(getState, send) {
-    return batchedSubscriptions(getState, send)
+    return subs(getState, send)
   }
 }
 

@@ -40,4 +40,4 @@ function handleEnterKey(getState, send) {
   })
 }
 
-export const batchedSubscriptions = batch(handleEnterKey, fetchJsonData)
+export const subs = batch(handleEnterKey, fetchJsonData)
