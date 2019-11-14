@@ -6,7 +6,6 @@
     "checkJs": true,
     "noEmit": true,
     "moduleResolution": "node",
-    "jsxFactory": "React.createElement",
     "lib": [
       "dom",
       "dom.iterable",

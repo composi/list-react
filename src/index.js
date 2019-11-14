@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from './utils'
+import ReactDOM from 'react-dom'
 import { run } from '@composi/runtime'
 import { Title } from './components/title'
 import { List } from './components/list'
@@ -7,7 +7,6 @@ import { actions } from './effects/actions'
 import { subs } from './effects/subscriptions'
 import './styles/styles.css'
 
-render(<Title greeting='Composi'/>, 'header')
 
 /**
  * @typedef {import('./types').State} State
@@ -27,7 +26,13 @@ const program = {
    * @param {Send} send
    */
   view(state, send) {
-    return state && render(<List {...{state, send}} />, 'section');
+    return state && ReactDOM.render(
+      <>
+        <Title greeting='Composi' />
+        <List {...{ state, send }} />
+      </>,
+      document.body
+    )
   },
   /**
    * @param {State} state
