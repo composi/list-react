@@ -13,7 +13,7 @@ import { idb } from '@composi/idb'
  * @param {GetState} getState
  * @param {Send} send
  */
-function fetchJsonData(getState, send) {
+function fetchData(getState, send) {
   (async () => {
     /** @type {State} */
     const savedState = await idb.get('app-state')
@@ -40,4 +40,4 @@ function handleEnterKey(getState, send) {
   })
 }
 
-export const subs = batch(handleEnterKey, fetchJsonData)
+export const subs = batch(handleEnterKey, fetchData)

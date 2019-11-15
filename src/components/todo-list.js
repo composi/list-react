@@ -11,7 +11,7 @@ const { AddItem, UpdateInputValue } = Msg
 /**
  * @param {{state: State, send: Send}} props
  */
-export function List({ state, send }) {
+export function TodoList({ state, send }) {
   /** @type {InputRef} */
   const input = useRef()
   useEffect(() => input.current.focus())
