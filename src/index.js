@@ -16,6 +16,8 @@ import './styles/styles.css'
  * @typedef {import('./types').Program} Program
  */
 
+const section = document.querySelector('section')
+
 /** @type {Program} */
 const program = {
   init() {
@@ -31,7 +33,7 @@ const program = {
         <Title greeting='Composi' />
         <TodoList {...{ state, send }} />
       </>,
-      document.body
+      section
     )
   },
   /**

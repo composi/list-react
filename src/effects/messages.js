@@ -7,4 +7,4 @@ import { union } from '@composi/runtime'
  */
 export const Msg = union('UpdateInputValue', 'AddItem', 'MakeDeletable', 'DeleteItem', 'UseFetchedData', 'SaveLocally')
 
-export const { UpdateInputValue, AddItem, MakeDeletable, DeleteItem, UseFetchedData, SaveLocally} = Msg
+export const { UpdateInputValue, AddItem, MakeDeletable, DeleteItem, UseFetchedData, SaveLocally } = Msg

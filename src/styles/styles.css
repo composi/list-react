@@ -17,10 +17,8 @@ header h1 {
   font-size: 2rem
 }
 
-section {
-  padding: 2rem;
-}
 .list-container {
+  padding: 2rem;
   width: 350px;
 }
 .list-container-form {
