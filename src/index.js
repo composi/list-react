@@ -45,11 +45,10 @@ const program = {
     return actions(state, msg, send)
   },
   /**
-   * @param {GetState} getState
    * @param {Send} send
    */
-  subscriptions(getState, send) {
-    return subs(getState, send)
+  subscriptions(send) {
+    return subs(send)
   }
 }
 

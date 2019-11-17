@@ -10,10 +10,9 @@ import { idb } from '@composi/idb'
  */
 
 /**
- * @param {GetState} getState
  * @param {Send} send
  */
-function fetchData(getState, send) {
+function fetchData(send) {
   (async () => {
     /** @type {State} */
     const savedState = await idb.get('app-state')
@@ -29,10 +28,9 @@ function fetchData(getState, send) {
 }
 
 /**
- * @param {GetState} getState
  * @param {Send} send
  */
-function handleEnterKey(getState, send) {
+function handleEnterKey(send) {
   document.addEventListener('keypress', e => {
     if (e.keyCode === 13) {
       send(AddItem())
