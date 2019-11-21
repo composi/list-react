@@ -20,10 +20,6 @@ export function actions(state, msg, send) {
 
   // Match received msg with tagged union types:
   return Msg.match(msg, {
-    UpdateInputValue: value => {
-      prevState.inputValue = value
-      return prevState
-    },
 
     AddItem: () => {
       if (prevState.inputValue) {
@@ -36,6 +32,12 @@ export function actions(state, msg, send) {
       } else {
         alert('Please provide a value before submitting.')
       }
+      return prevState
+    },
+
+    DeleteItem: key => {
+      prevState.items = prevState.items.filter(item => item.key !== key)
+      send(SaveLocally(prevState))
       return prevState
     },
 
@@ -52,17 +54,16 @@ export function actions(state, msg, send) {
       return prevState
     },
 
-    DeleteItem: key => {
-      prevState.items = prevState.items.filter(item => item.key !== key)
-      send(SaveLocally(prevState))
-      return prevState
-    },
-
-    UseFetchedData: data => data,
-
     SaveLocally: data => {
       idb.set('app-state', data)
       return prevState
-    }
+    },
+
+    UpdateInputValue: value => {
+      prevState.inputValue = value
+      return prevState
+    },
+
+    UseFetchedData: data => data
   })
 }

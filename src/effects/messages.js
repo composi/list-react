@@ -5,6 +5,20 @@ import { union } from '@composi/runtime'
  * Define tagged union for actions.
  * @type {import('../types').MessageUnion}
  */
-export const Msg = union('UpdateInputValue', 'AddItem', 'MakeDeletable', 'DeleteItem', 'UseFetchedData', 'SaveLocally')
+export const Msg = union(
+  'AddItem',
+  'DeleteItem',
+  'MakeDeletable',
+  'SaveLocally',
+  'UpdateInputValue',
+  'UseFetchedData'
+)
 
-export const { UpdateInputValue, AddItem, MakeDeletable, DeleteItem, UseFetchedData, SaveLocally } = Msg
+export const {
+  AddItem,
+  DeleteItem,
+  MakeDeletable,
+  SaveLocally,
+  UpdateInputValue,
+  UseFetchedData
+} = Msg

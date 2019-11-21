@@ -29,22 +29,22 @@ export function noop() { }
 
 /**
  * @typedef {Object} ActionMethods
- * @prop {(value: string) => State} UpdateInputValue
  * @prop {() => State} AddItem
- * @prop {(key: number) => State} MakeDeletable
  * @prop {(key: number) => State} DeleteItem
- * @prop {(data: State) => State} UseFetchedData
+ * @prop {(key: number) => State} MakeDeletable
  * @prop {(data: State) => State} SaveLocally
+ * @prop {(value: string) => State} UpdateInputValue
+ * @prop {(data: State) => State} UseFetchedData
  */
 /**
  * @typedef {Object} MessageUnion
  * @prop {(msg: Message, Object: ActionMethods) => State} match
- * @prop {(value: string) => Message} UpdateInputValue
  * @prop {() => Message} AddItem
- * @prop {(key: number) => Message} MakeDeletable
  * @prop {(key: number) => Message} DeleteItem
- * @prop {(data: State) => Message} UseFetchedData
+ * @prop {(key: number) => Message} MakeDeletable
  * @prop {(data: State) => Message} SaveLocally
+ * @prop {(value: string) => Message} UpdateInputValue
+ * @prop {(data: State) => Message} UseFetchedData
  */
 
 /**
