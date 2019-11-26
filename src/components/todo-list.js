@@ -1,8 +1,7 @@
 import React, { useRef, useEffect } from 'react'
-import { Msg } from '../effects/messages'
+import { AddItem, UpdateInputValue } from '../effects/messages'
 import { ListItem } from './list-item'
 
-const { AddItem, UpdateInputValue } = Msg
 /**
  * @typedef {import('../types').State} State
  * @typedef {import('../types').Send} Send
