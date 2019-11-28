@@ -1,6 +1,6 @@
-import { batch } from '@composi/runtime'
-import { AddItem, UseFetchedData } from './messages'
-import { idb } from '@composi/idb'
+import {batch} from '@composi/runtime'
+import {AddItem, UseFetchedData} from './messages'
+import {idb} from '@composi/idb'
 
 
 /**

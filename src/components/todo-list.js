@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react'
-import { AddItem, UpdateInputValue } from '../effects/messages'
-import { ListItem } from './list-item'
+import React, {useRef, useEffect} from 'react'
+import {AddItem, UpdateInputValue} from '../effects/messages'
+import {ListItem} from './list-item'
 
 /**
  * @typedef {import('../types').State} State
@@ -10,7 +10,7 @@ import { ListItem } from './list-item'
 /**
  * @param {{state: State, send: Send}} props
  */
-export function TodoList({ state, send }) {
+export function TodoList({state, send}) {
   /** @type {InputRef} */
   const input = useRef()
   useEffect(() => input.current.focus())
@@ -22,7 +22,7 @@ export function TodoList({ state, send }) {
       </p>
       <ul className="list">
         {
-          state.items.map(item => <ListItem key={item.key} {...{ item, send }} />)
+          state.items.map(item => <ListItem key={item.key} {...{item, send}} />)
         }
       </ul>
     </div>

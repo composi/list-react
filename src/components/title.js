@@ -3,7 +3,7 @@ import React from 'react'
 /**
  * @param {{greeting: string}} props
  */
-export function Title({ greeting }) {
+export function Title({greeting}) {
   return (
     <header>
       <nav>
