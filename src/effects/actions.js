@@ -1,6 +1,6 @@
-import { Msg, DeleteItem, SaveLocally } from './messages'
-import { clone } from '@composi/clone'
-import { idb } from '@composi/idb'
+import {match, DeleteItem, SaveLocally} from './messages'
+import {clone} from '@composi/clone'
+import {idb} from '@composi/idb'
 
 /**
  * @typedef {import('../types').State} State
@@ -19,7 +19,7 @@ export function actions(state, msg, send) {
   const prevState = clone(state)
 
   // Match received msg with tagged union types:
-  return Msg.match(msg, {
+  return match(msg, {
 
     AddItem: () => {
       if (prevState.inputValue) {

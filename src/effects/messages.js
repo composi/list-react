@@ -1,4 +1,4 @@
-import { union } from '@composi/runtime'
+import {union} from '@composi/runtime'
 
 
 /**
@@ -15,6 +15,7 @@ export const Msg = union(
 )
 
 export const {
+  match,
   AddItem,
   DeleteItem,
   MakeDeletable,

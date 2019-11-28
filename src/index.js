@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import { run } from '@composi/runtime'
-import { Title } from './components/title'
-import { TodoList } from './components/todo-list'
-import { actions } from './effects/actions'
-import { subs } from './effects/subscriptions'
+import {run} from '@composi/runtime'
+import {Title} from './components/title'
+import {TodoList} from './components/todo-list'
+import {actions} from './effects/actions'
+import {subs} from './effects/subscriptions'
 import './styles/styles.css'
 
 
@@ -31,7 +31,7 @@ const program = {
     return state && ReactDOM.render(
       <>
         <Title greeting='Composi' />
-        <TodoList {...{ state, send }} />
+        <TodoList {...{state, send}} />
       </>,
       section
     )
