@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import {run} from '@composi/runtime'
+import {clone} from '@composi/clone'
 import {Title} from './components/title'
 import {TodoList} from './components/todo-list'
 import {actions} from './effects/actions'
@@ -42,7 +43,8 @@ const program = {
    * @param {Send} send
    */
   update(state, msg, send) {
-    return actions(state, msg, send)
+    const prevState = clone(state)
+    return actions(prevState, msg, send)
   },
   /**
    * @param {Send} send

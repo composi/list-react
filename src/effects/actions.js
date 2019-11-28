@@ -1,5 +1,4 @@
 import {match, DeleteItem, SaveLocally} from './messages'
-import {clone} from '@composi/clone'
 import {idb} from '@composi/idb'
 
 /**
@@ -14,35 +13,31 @@ import {idb} from '@composi/idb'
  */
 export function actions(state, msg, send) {
 
-  // Create deep clone of state for immutability:
-  /** @type {State} */
-  const prevState = clone(state)
-
   // Match received msg with tagged union types:
   return match(msg, {
 
     AddItem: () => {
-      if (prevState.inputValue) {
-        prevState.items.push({
-          key: prevState.newKey++,
-          value: prevState.inputValue
+      if (state.inputValue) {
+        state.items.push({
+          key: state.newKey++,
+          value: state.inputValue
         })
-        prevState.inputValue = ''
-        send(SaveLocally(prevState))
+        state.inputValue = ''
+        send(SaveLocally(state))
       } else {
         alert('Please provide a value before submitting.')
       }
-      return prevState
+      return state
     },
 
     DeleteItem: key => {
-      prevState.items = prevState.items.filter(item => item.key !== key)
-      send(SaveLocally(prevState))
-      return prevState
+      state.items = state.items.filter(item => item.key !== key)
+      send(SaveLocally(state))
+      return state
     },
 
     MakeDeletable: key => {
-      prevState.items = prevState.items.map(item => {
+      state.items = state.items.map(item => {
         if (item.key === key) {
           item.deletable = true
           setTimeout(() => {
@@ -51,19 +46,21 @@ export function actions(state, msg, send) {
         }
         return item
       })
-      return prevState
+      return state
     },
 
     SaveLocally: data => {
       idb.set('app-state', data)
-      return prevState
+      return state
     },
 
     UpdateInputValue: value => {
-      prevState.inputValue = value
-      return prevState
+      state.inputValue = value
+      return state
     },
 
     UseFetchedData: data => data
   })
 }
+
+Msg.match = (msg, actionMethods) => Object.prototype.hasOwnProperty.call(actionMethods, msg.type) && actionMethods[msg.type](msg.data)
