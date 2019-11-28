@@ -62,5 +62,3 @@ export function actions(state, msg, send) {
     UseFetchedData: data => data
   })
 }
-
-Msg.match = (msg, actionMethods) => Object.prototype.hasOwnProperty.call(actionMethods, msg.type) && actionMethods[msg.type](msg.data)
