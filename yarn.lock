@@ -943,20 +943,15 @@
   resolved "https://registry.yarnpkg.com/@composi/clone/-/clone-1.0.1.tgz#a87fd4b98adad1b57c9569fed865ecde9d16297f"
   integrity sha512-ebqrVfYNDW9GWWehxZYPyqNSZl4u04Xq83U2RjeTEUU1mLlit6QL6Qvxxb1CKi3o480ix6iW6IqHC9IdrS9OnQ==
 
-"@composi/core@^2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@composi/core/-/core-2.6.0.tgz#2383e7a8944e228dcf8b9db86486e6c9d55994f2"
-  integrity sha512-J8+GvGWjiEr0XvJ1jLwdL50fnky13IHgUp3SIEXQbGAwEyA0F1YsMbUYz4PMNtVzcvqWGgFHlaS/Pntc8IsGXw==
-
 "@composi/idb@^1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@composi/idb/-/idb-1.0.8.tgz#fe85b8027a8bbfcc21a18a57d2073d2eb06358ba"
   integrity sha512-1QfBAMnE0Rs5BKv0aKhs1suwzHPzS97e2h+2QUlI7QwqgO0TpObTtAsifK2mbvz2ux2Xxvusrvs6gA3dMEKu2g==
 
-"@composi/runtime@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@composi/runtime/-/runtime-1.2.0.tgz#b9c20a066661b0f5ab99174d28858fdc9dd7fc4c"
-  integrity sha512-2NuuPKsgHXA30PrOizrO+qeQmlCJOmtV86EVppEW0Mg3SgvR6mvU9uyKuH+QZSDaVM7CQr1cs5tvzueCx1ESTw==
+"@composi/runtime@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@composi/runtime/-/runtime-1.3.0.tgz#0bca8da4635afb71b69dc6c38f5acdd82eaf4689"
+  integrity sha512-+ZtYRodDHZp+/tpGZzshSfcXGB64Jczbir2c0ogZlfFR0W5m6xe0clffxIhDrr8j7osYt80OUwK0ar1XWyAoiA==
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
