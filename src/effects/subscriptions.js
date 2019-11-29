@@ -17,12 +17,12 @@ function fetchData(send) {
     /** @type {State} */
     const savedState = await idb.get('app-state')
     if (savedState) {
-      send(UseFetchedData(savedState))
+      send(UseFetchedData, savedState)
     } else {
       const data = await fetch('/data/state.json')
       /** @type {State} */
       const json = await data.json()
-      send(UseFetchedData(json))
+      send(UseFetchedData, json)
     }
   })()
 }
@@ -33,7 +33,7 @@ function fetchData(send) {
 function handleEnterKey(send) {
   document.addEventListener('keypress', e => {
     if (e.keyCode === 13) {
-      send(AddItem())
+      send(AddItem)
     }
   })
 }
