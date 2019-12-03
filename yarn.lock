@@ -938,10 +938,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@composi/clone@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@composi/clone/-/clone-1.0.1.tgz#a87fd4b98adad1b57c9569fed865ecde9d16297f"
-  integrity sha512-ebqrVfYNDW9GWWehxZYPyqNSZl4u04Xq83U2RjeTEUU1mLlit6QL6Qvxxb1CKi3o480ix6iW6IqHC9IdrS9OnQ==
+"@composi/clone@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@composi/clone/-/clone-1.2.0.tgz#d50c1e136bf96133772a6fb67e2eaaf0047043e7"
+  integrity sha512-VGaSSfyUaMRmK7tZHtO+V9UXhxKzdibLgVIhjKOWVBs7UZtxJw5w7eb24jpZ9teKlatxHyj/QYontNfJyAIOLQ==
 
 "@composi/idb@^1.0.8":
   version "1.0.8"

@@ -17,12 +17,12 @@ function fetchData(send) {
     /** @type {State} */
     const savedState = await idb.get('app-state')
     if (savedState) {
-      send(UseFetchedData, savedState)
+      setTimeout(() => send(UseFetchedData, savedState), 2000)
     } else {
       const data = await fetch('/data/state.json')
       /** @type {State} */
       const json = await data.json()
-      send(UseFetchedData, json)
+      setTimeout(() => send(UseFetchedData, json), 2000)
     }
   })()
 }

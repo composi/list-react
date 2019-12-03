@@ -152,3 +152,28 @@ li.new-item.remove-item {
     padding: 0 2rem;
  }
 }
+
+.loading {
+  margin: 2rem;
+  animation-name: loading-data;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+}
+@keyframes loading-data {
+  0% {
+    color: blue;
+  }
+  25% {
+    color: #eaeaea;
+  }
+  50% {
+   color: blue;
+  }
+  75% {
+    color: #eaeaea;
+  }
+  100% {
+    color: blue;
+  }
+}

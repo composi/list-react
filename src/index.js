@@ -43,6 +43,7 @@ const program = {
    * @param {Send} send
    */
   update(state, msg, send) {
+    /** @type {State} */
     const prevState = clone(state)
     return actions(prevState, msg, send)
   },
@@ -54,4 +55,5 @@ const program = {
   }
 }
 
+// Run the program.
 run(program)

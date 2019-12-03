@@ -29,12 +29,12 @@ export function noop() { }
 
 /**
  * @typedef {Object} ActionMethods
- * @prop {() => State} AddItem
- * @prop {(key: number) => State} DeleteItem
- * @prop {(key: number) => State} MakeDeletable
- * @prop {(data: State) => State} SaveLocally
- * @prop {(value: string) => State} UpdateInputValue
- * @prop {(data: State) => State} UseFetchedData
+ * @prop {() => State} AddItem - Add new item to state items.
+ * @prop {(key: number) => State} DeleteItem - Delete item from state items based on key.
+ * @prop {(key: number) => State} MakeDeletable - Mark a list item as deletable. This triggers an animation before deletion. When done it will send the message "DeleteItem"
+ * @prop {(data: State) => State} SaveLocally - Save state in IndexedDB.
+ * @prop {(value: string) => State} UpdateInputValue - Update this value as the user types.
+ * @prop {(data: State) => State} UseFetchedData - Get data either from IndexedDB or from JSON file.
  */
 /**
  * @typedef {Object} MessageUnion
