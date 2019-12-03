@@ -22,8 +22,6 @@
   },
   "include": [
     "src/index.js",
-    "node_modules/@composi/runtime/src/*.js",
-    "node_modules/@composi/idb/src/*.js",
-    "node_modules/@composi/clone/src/*.js"
+    "node_modules/@composi/**/src/*.js",
   ]
 }

@@ -31,7 +31,7 @@ const program = {
   view(state, send) {
     return state && ReactDOM.render(
       <>
-        <Title greeting='Composi' />
+        <Title greeting='Composi Runtime' />
         <TodoList {...{state, send}} />
       </>,
       section
