@@ -10,6 +10,7 @@ import {idb} from '@composi/idb'
  */
 
 /**
+ * When program starts first check is there is saved data in IndexedDB. If there is, use it. Otherwise fetch default data from local JSON file.
  * @param {Send} send
  */
 function fetchData(send) {
@@ -28,6 +29,7 @@ function fetchData(send) {
 }
 
 /**
+ * Set up event listener to use Enter/Return keys to add new items.
  * @param {Send} send
  */
 function handleEnterKey(send) {
