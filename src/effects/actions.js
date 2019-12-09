@@ -19,7 +19,7 @@ export const actions = (state, msg, send) => match(msg, {
         value: state.inputValue
       })
       state.inputValue = ''
-      send(SaveLocally(state))
+      send(SaveLocally, state)
     } else {
       alert('Please provide a value before submitting.')
     }
@@ -28,7 +28,7 @@ export const actions = (state, msg, send) => match(msg, {
 
   DeleteItem: key => {
     state.items = state.items.filter(item => item.key !== key)
-    send(SaveLocally(state))
+    send(SaveLocally, state)
     return state
   },
 
@@ -37,7 +37,7 @@ export const actions = (state, msg, send) => match(msg, {
       if (item.key === key) {
         item.deletable = true
         setTimeout(() => {
-          send(DeleteItem(key))
+          send(DeleteItem, key)
         }, 1000)
       }
       return item
