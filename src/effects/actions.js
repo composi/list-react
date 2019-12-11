@@ -14,10 +14,13 @@ import {idb} from '@composi/idb'
 export const actions = (state, msg, send) => match(msg, {
   AddItem: () => {
     if (state.inputValue) {
-      state.items.push({
-        key: state.newKey++,
-        value: state.inputValue
-      })
+      state.items = [
+        ...state.items,
+        {
+          key: state.newKey++,
+          value: state.inputValue
+        }
+      ]
       state.inputValue = ''
       send(SaveLocally, state)
     } else {
