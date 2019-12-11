@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import {render} from 'react-dom'
 import {run} from '@composi/runtime'
 import {clone} from '@composi/clone'
 import {Title} from './components/title'
@@ -29,7 +29,7 @@ const program = {
    * @param {Send} send
    */
   view(state, send) {
-    return state && ReactDOM.render(
+    return state && render(
       <>
         <Title greeting='Composi Runtime' />
         <TodoList {...{state, send}} />
