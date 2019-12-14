@@ -60,3 +60,4 @@ export const actions = (state, msg, send) => match(msg, {
 
   UseFetchedData: data => data
 })
+
