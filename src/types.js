@@ -5,9 +5,9 @@ export function noop() { }
 // Main @composi/runtime types:
 ///////////////////////////////
 /**
- * @typedef {import('@composi/runtime/types').Message} Message
- * @typedef {import('@composi/runtime/types').Send} Send
- * @typedef {import('@composi/runtime/types').Program} Program
+ * @typedef {import('@composi/runtime').Message} Message
+ * @typedef {import('@composi/runtime').Send} Send
+ * @typedef {import('@composi/runtime').Program} Program
  * @typedef {() => State} GetState
  */
 
