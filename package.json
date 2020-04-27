@@ -25,15 +25,15 @@
     ]
   },
   "devDependencies": {
-    "@composi/clone": "^1.2.1",
-    "@composi/idb": "^1.0.8",
-    "@composi/runtime": "^1.3.7",
+    "@composi/clone": "^1.2.4",
+    "@composi/idb": "^1.0.10",
+    "@composi/runtime": "^1.3.9",
     "@types/node": "^12.12.3",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "typescript": "^3.6.4"
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.7.3"
   }
 }
